@@ -1,5 +1,5 @@
 {% set name = "flammkuchen" %}
-{% set version = "0.9.2" %}
+{% set version = "1.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f249fe5bf85f717d3836e0db6fa9443a8a43101ce07704715b42251c44fc968e
+  sha256: cfaf0706c53d27aa1ef3e60be0e39088c61046cdd36540ccf9edacb2aa3a0452
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -30,10 +30,10 @@ test:
 
 about:
   home: https://github.com/portugueslab/flammkuchen
-  license: "BSD-3-Clause"
-  license_family: "BSD"
+  license: BSD-3-Clause
+  license_family: BSD
   license_file: LICENSE
-  summary: 'Flexible HDF5 saving/loading library forked from deepdish (University of Chicago) and maintained by the Portugues lab'
+  summary: Flexible HDF5 saving/loading library forked from deepdish (University of Chicago) and maintained by the Portugues lab
   doc_url: https://github.com/portugueslab/flammkuchen
   dev_url: https://github.com/portugueslab/flammkuchen
 
